@@ -13,4 +13,4 @@ const Largest = () => {
     return larg;
 }
 
-console.log(Largest()); 
+console.log(Largest());

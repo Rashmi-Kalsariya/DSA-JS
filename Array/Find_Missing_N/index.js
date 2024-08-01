@@ -1,20 +1,21 @@
 
 
-const arr = [1, 2, 4, 5, 6];
+const arr = [1, 3, 4, 5, 7];
 
-const findMissing = () => {
-    let n = arr.length + 1;
+const findMissing = (arr) => {
+    let n = arr.length
 
-    let expectedSum = (n * (n + 1)) / 2;
+    let totalSum = 0
+    for (let i = 1; i <= arr.length + 1; i++) {
+        totalSum += i
+    }
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        sum += arr[i]
+    }
 
-    let actualSum = arr.reduce((sum, num) => sum+num ,0);
+    return totalSum - sum
 
-    console.log(actualSum);
-
-    let missingNumber = expectedSum - actualSum;
-
-    return missingNumber;
 }
 
-
-console.log(findMissing());
+console.log(findMissing(arr));
