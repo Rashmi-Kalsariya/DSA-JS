@@ -1,4 +1,4 @@
-const FindTarget_PairSum = (arr, traget) => {
+const FindTarget_PairSum = (arr, target) => {
     let i = 0;
     let j = arr.length - 1;
     let sum = 0;
@@ -7,7 +7,7 @@ const FindTarget_PairSum = (arr, traget) => {
     while (i < j) {
         sum = arr[i] + arr[j];
 
-        if (sum < traget) {
+        if (sum < target) {
             for (let k = j; k > i; k--) result.push([arr[i], arr[k]]);
 
             i++;
