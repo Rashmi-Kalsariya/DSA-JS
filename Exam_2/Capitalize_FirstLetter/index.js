@@ -1,13 +1,50 @@
 let str = "the quick Brown fox jumps over The lazy dog"
 
 
-const Capitalize_Letter = (str) => {
+// let words = str.split(" ");
 
-    let capitalized = str.replace(/\b\w/g, char => char.toUpperCase());
+// for (let i = 0; i < words.length; i++) {
+//     words[0] = words[0].toUpperCase();
+//     if (words[i] == " ") {
+//         words[i + 1] = words[i + 1].toUpperCase();
+//     }
+// }
 
-    console.log(capitalized);
+// console.log(words.join(" "));
 
+
+
+// const ConvertToUpperCase = (str) => {
+
+//     let words = str.split(" ");
+//     words[0] = words[0].toUpperCase();
+//     return words.join(" ");
+// }
+
+// const CapitalizeFirstLetter = (arr) => {
+//     for (i = 0; i < arr.length; i++) {
+//         arr[i] = ConvertToUpperCase(arr[i])
+//     }
+//     console.log(arr.join(" "));
+
+// }
+
+
+
+
+const ConvertToUpperCase = (str) => {
+
+    let words = str.split(" ");
+    words[0] = words[0].toUpperCase();
+    return words.join(" ");
+}
+
+const CapitalizeFirstLetter = (arr) => {
+    for (i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].replace(arr[i][0], arr[i][0].toUpperCase())
+    }
+    console.log(arr.join(" "));
 
 }
 
-console.log(Capitalize_Letter(str));
+
