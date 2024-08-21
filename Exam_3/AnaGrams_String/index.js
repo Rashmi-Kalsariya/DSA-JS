@@ -3,5 +3,3 @@ let str2 = "silent"
 
 
 
-
-
