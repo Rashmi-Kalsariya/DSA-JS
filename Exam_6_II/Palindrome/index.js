@@ -1,11 +1,19 @@
 
-const palindrome = (string, i = 0, j = string.length - 1) => {
+const palindrome = (str) => {
 
-    if (i >= j) return true;
+    let i = 0;
+    let j = str.length - 1;
 
-    if (string.charAt(i).toLowerCase() !== string.charAt(j).toLowerCase()) return false;
+    while (i < j) {
+        if (str[i] !== str[j]) {
+            return false;
+        }
+        i++;
+        j--;
+    }
 
-    return palindrome(string, i + 1, j - 1);
-};
+    return true;
+}
 
-console.log(palindrome("racecar")); 
+
+console.log(palindrome("racecar"));

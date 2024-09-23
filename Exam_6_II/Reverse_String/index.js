@@ -1,10 +1,17 @@
 
 
-const ReverseString = (str, i = 0) => {
-    if (i == str.length)
-        return "";
+const ReverseString = (str) => {
+    let arr = str.split('');
+    let i = 0;
+    let j = arr.length - 1;
 
-    return ReverseString(str, i + 1) + str.charAt(i);
-};
+    while (i < j) {
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+        i++;
+        j--;
+    }
 
-console.log(ReverseString("recursion")); 
+    return arr.join('');
+}
+
+console.log(ReverseString("recursion"));
